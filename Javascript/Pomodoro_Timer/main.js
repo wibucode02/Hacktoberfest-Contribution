@@ -144,6 +144,10 @@ function switchMode(mode) {
   updateClock();
 }
 
+function myFunction() {
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if ('Notification' in window) {
     if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
