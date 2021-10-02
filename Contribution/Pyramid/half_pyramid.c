@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int halfPyramid(){
+int main(){
     int row = 10;
     for (int i = 1; i <= row; i++)
     {
@@ -11,8 +11,4 @@ int halfPyramid(){
         putchar('\n');
     }
     return 0;
-}
-
-int main(){
-    halfPyramid();
 }
