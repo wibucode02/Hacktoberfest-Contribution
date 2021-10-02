@@ -1,1 +1,3 @@
-print("Hello, World!");
+Void main() {
+Print("Hello, World!");
+}
