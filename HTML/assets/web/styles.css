@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --cyan: #43e8ed;
+  --light-blue: #f50a0a;
+  --dark-blue: #1871bc;
+  --Poppins: "Poppins", Segoe UI;
+  --Lobster-Two: "Lobster Two", Segoe UI;
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+/*     =====================================================================
+       ========================== Common things here =======================
+       =====================================================================
+  */
+a {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+strong {
+  color: var(--dark-blue);
+}
+div.button {
+  margin: 5vh;
+}
+div.blank {
+  height: 3vh;
+}
+button {
+  padding: 1.5vh 2vw;
+  background: linear-gradient(110deg, var(--light-blue), var(--dark-blue));
+  cursor: pointer;
+  font-family: var(--Lobster-Two);
+  font-size: 20px;
+  transition: 1s;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+label {
+  text-align: center;
+  font-family: var(--Lobster-Two);
+  font-size: 16px;
+  color: var(--dark-blue);
+}
+::selection {
+  background-color: var(--cyan);
+  color: var(--navy);
+}
+img {
+  width: 100%;
+}
+
+/* ======================================================================
+       =========================== body's here  ==============================
+       =======================================================================
+  */
+
+body {
+  max-width: 100vw;
+  color: var(--light-blue);
+  background-color: #ddd;
+  font-family: var(--Poppins);
+  margin: 6vh 10vw;
+  /* border: .5px solid var(--cyan); */
+}
+
+/* =====================================================================
+     ========================== navbar here ==============================
+     =====================================================================
+  */
+
+body > nav {
+  background-color: #eeeeeeda;
+  display: flex;
+  width: 50vw;
+  height: 7vh;
+  padding: 2vh;
+  border-radius: 5px;
+  position: sticky;
+  top: 5vh;
+  margin: auto auto;
+  font-size: 15px;
+  color: var(--navy);
+  box-shadow: 0px 5px 1rem rgba(0, 0, 0, 0.274);
+  z-index: 2;
+}
+body > nav > a:nth-child(1) > div > img.logo {
+  max-width: 3.5vw;
+}
+body > nav > a > div {
+  /* border: .5px solid yellow; */
+  padding: 0 2.5vw;
+}
+body > nav {
+  align-items: center;
+  justify-content: center;
+}
+body > nav > a > div > button {
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+/* ======================================================================
+       =========================== Home section  ==============================
+       =======================================================================
+  */
+
+body > section.home {
+  margin: 10vh 0 20vh 0;
+}
+body > section.home > p {
+  color: var(--dark-blue);
+}
+body > section.home > h1 {
+  font-size: 30px;
+  color: var(--navy);
+}
+body > section.home > h2 {
+  color: var(--navy);
+  font-size: 55px;
+  animation: rotate 2s infinite;
+}
+body > section.home > h2::after {
+  content: "";
+  animation: name 20s 2s infinite; 
+  background: linear-gradient(153deg, rgba(0,236,255,1) 0%, rgba(0,49,103,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+body > section.home > div.hero-text {
+  color: var(--navy);
+  font-size: 16px;
+  margin: 3vh 0;
+  width: 60%;
+}
+body > section.home > div.hero-button {
+  margin: 5vh 0;
+}
+body > section.home > div.hero-button > a > button {
+  padding: 2.5vh 5vw;
+}
+@keyframes name {
+  10% {
+    content: "I'm a graphic desinger.";
+    font-size: 57px;
+  }
+  20% {
+    content: "I'm a web developer.";
+    font-size: 55px;
+  }
+  30% {
+    content: "I'm a react developer.";
+    font-size: 53px;
+  }
+  40% {
+    content: "I build web apps.";
+    font-size: 65px;
+  }
+  50% {
+    content: "I build progressive web apps.";
+    font-size: 55px;
+  }
+  60% {
+    content: "I build databases too.";
+    font-size: 50px;
+  }
+  70% {
+    content: "I like to use terminal.";
+    font-size: 55px;
+  }
+  80% {
+    content: "I love  詠春.";
+    font-size: 50px;
+  }
+  90% {
+    content: "I love to talk.";
+    font-size: 55px;
+  }
+  100% {
+    content: "I am someone like you.";
+    font-size: 60px;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+/*   =====================================================================
+     ========================== About section =============================
+     =====================================================================
+  */
+
+body > section.about {
+  /* border: .5px solid yellow; */
+  /* color: var(--light-slate); */
+}
+body > section > h1 {
+  color: var(--navy);
+}
+body > section.about > div.flex {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+body > section.about > div.flex > div.flex1 {
+  /* */
+}
+body > section.about > div.flex > div.flex1 > img {
+  transition: 1s ease-in;
+  width: 100%;
+}
+body > section.about > div.flex > div.flex2 {
+  text-align: justify;
+  margin: 0 0 0 3vw;
+}
+
+/*   =====================================================================
+     ========================== projects section =============================
+     =====================================================================
+  */
+
+body > section.projects {
+  margin: 20vh 0;
+}
+
+body > section.projects > div.projects > div.project {
+  /* border: .5px solid yellow; */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 5vh 2.5vw;
+  background-color: var(#e6f1ffe);
+}
+body > section.projects > div.projects > div.project > div.project-text {
+  margin: 0 0 0 5vw;
+  text-align: justify;
+}
+/* body > section.projects > div.projects > div.project > * {
+
+  } */
+body > section.projects > div.projects > label {
+  background: linear-gradient(110deg, var(--light-blue), var(--dark-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body > section.projects > div.projects > label::before {
+  content: "▹ Featured Project : ";
+  left: 10vw;
+  background-color: var(--navy);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+/*   =====================================================================
+     ========================== mail section =============================
+     =====================================================================
+  */
+
+body > section.mail {
+  text-align: center;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  width: 50vw;
+  margin: auto auto;
+}
+body > section.mail > h1 {
+  font-size: 65px;
+}
+body > section.mail > div.button > button {
+  padding: 3vh 5vw;
+  border-radius: 7px;
+}
+
+/*   =====================================================================
+     ========================== built by credit section =============================
+     =====================================================================
+  */
+
+body > section.built {
+  text-align: center;
+  font-size: 13px;
+}
+body > section.built > i{
+  color: var(--dark-blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================================================
+====================================================================================
+==================================               ===================================
+==================================  Media Query  ===================================
+==================================               ===================================
+====================================================================================
+====================================================================================
+  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  /* ======================================================================
+       =========================== body's here  ==============================
+       =======================================================================
+  */
+
+  body {
+    max-width: 100vw;
+    color: var(--navy);
+    font-family: "Poppins", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5vh 5vw;
+    /* border: .5px solid var(--cyan); */
+  }
+
+  /* =====================================================================
+     ========================== navbar here ==============================
+     =====================================================================
+  */
+
+  body > nav {
+    display: flex;
+    width: 80vw;
+    height: 7vh;
+    padding: 2vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1rem rgba(0, 0, 0, 0.445);
+    position: sticky;
+    top: 85vh;
+    margin: auto auto;
+    font-size: 11px;
+    transition: 0.5s ease-out;
+    animation: move 1s 1;
+    color: var(--navy);
+  }
+  @keyframes move {
+    from {
+      border-radius: 0px;
+      top: 0vh;
+    }
+    to {
+      border-radius: 10px;
+      top: 85vh;
+    }
+  }
+  body > nav > a:nth-child(1) > div > img.logo {
+    max-width: 6vw;
+  }
+  body > nav > a > div {
+    /* border: .5px solid yellow; */
+    padding: 0 2.5vw;
+  }
+  body > nav {
+    align-items: center;
+    justify-content: center;
+  }
+  body > nav > a > div > button {
+    font-size: 15px;
+    border-radius: 5px;
+  }
+
+  /* =====================================================================
+     ========================== home section =============================
+     =====================================================================
+  */
+  body > section.home {
+    text-align: center;
+    margin: 0 0 15vh 0;
+    color: var(--navy);
+    /* border: .5px solid yellow; */
+  }
+  body > section.home > p {
+    color: var(--dark-blue);
+    /* border: .5px solid var(--green); */
+    font-size: 15px;
+  }
+  body > section.home > h1 {
+    color: var(--navy);
+    /* border: .5px solid var(--green); */
+    font-size: 20px;
+    font-weight: 700;
+  }
+  body > section.home > h2 {
+    color: var(--light-navy);
+    /* border: .5px solid yellow; */
+  }
+  body > section.home > h2::after {
+    content: "";
+    animation: name 30s 2s infinite;
+  display: inline-block;
+  margin: auto auto;
+  }
+  body > section.home > div.hero-text {
+    /* border: .5px solid var(--green); */
+    margin: auto auto;
+    width: 100%;
+    text-align: center;
+    /* border: .5px solid yellow; */
+  }
+  body > section.home > div.hero-button > a > button {
+    width: 50vw;
+    background-color: var(--light-blue);
+  }
+
+  @keyframes name {
+    10% {
+      content: "I'm a graphic desinger";
+      font-size: 25px;
+    }
+    20% {
+      content: "I'm a web developer";
+      font-size: 20px;
+    }
+    30% {
+      content: "I'm a react developer";
+      font-size: 23px;
+    }
+    40% {
+      content: "I build web apps";
+      font-size: 25px;
+    }
+    50% {
+      content: "I build progressive web apps";
+      font-size: 19px;
+    }
+    60% {
+      content: "I build databases too";
+      font-size: 21px;
+    }
+    70% {
+      content: "I like to use terminal";
+      font-size: 20px;
+    }
+    80% {
+      content: "I love  AnonSecTeam.inc";
+      font-size: 25 px;
+    }
+    90% {
+      content: "I love to talk";
+      font-size: 20px;
+    }
+    100% {
+      content: "I am someone like you";
+      font-size: 18px;
+    }
+  }
+  @keyframes size {
+    0% {
+      font-size: 20px;
+    }
+    50% {
+      font-size: 22px;
+    }
+    100% {
+      font-size: 20px;
+    }
+  }
+
+  /*   =====================================================================
+     ========================== About section =============================
+     =====================================================================
+  */
+
+  body > section.about {
+    /* border: .5px solid yellow; */
+    color: var(--light-blue);
+  }
+  body > section > h1 {
+    color: var(--light-blue);
+  }
+  body > section.about > div.flex {
+    display: inline;
+  }
+
+  body > section.about > div.flex > div.flex1 > img {
+    display: none;
+  }
+  body > section.about > div.flex > div.flex1 {
+    background-image: url(/assets/media/me.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+  }
+  body > section.about > div.flex > div.flex2 {
+    margin: 5vh 0;
+    text-align: justify;
+  }
+
+
+  /*   =====================================================================
+     ========================== project section ==========================
+     =====================================================================
+  */
+
+
+  body > section.projects {
+    color: var(--light-navy);
+  }
+  body > section.projects > h1 {
+    color: var(--navy);
+  }
+  body > section.projects > div.projects > div.project{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    
+  }
+  body > section.projects > div.projects > div.project > div.project-text {
+    margin: 3vh 0;
+    text-align: justify;
+  }
+  body > section.projects > div.projects > div.project {
+    margin: 10vh 0;
+    display: inline-block;
+  }
+
+  /*   =====================================================================
+     ========================== Mail section ==========================
+     =====================================================================
+  */
+
+  body > section.mail {
+    display: inline;
+    text-align: center;
+    margin: 5vh 0 15vh 0;
+    color: var(--light-navy);
+  }
+  body > section.mail > label {
+    margin: 0 30vw;
+  }
+  body > section.mail > h1 {
+    color: var(--navy);
+    font-size: 50px;
+  }
+  body > section.mail > div.button > button {
+    padding: 1.5vh 5vw;
+    border-radius: 5px;
+  }
+
+  /*   =====================================================================
+     ========================== built by section ==========================
+     =====================================================================
+  */
+
+  body > section.built {
+    font-size: 10px;
+    text-align: center;
+    height: 20vh;
+  }
+
+}
