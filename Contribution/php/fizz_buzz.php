@@ -20,3 +20,5 @@ function fizzBuzz($angka)
 for ($i = 1; $i <= 100; $i++) { 
     fizzBuzz($i);
 }
+
+?>
