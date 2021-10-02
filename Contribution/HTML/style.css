@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
+
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --cyan: #43e8ed;
+  --light-blue: #4bc5db;
+  --dark-blue: #1871bc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Lobster Two";
+}
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color:var(--navy);
+}
+body > main {
+  text-align: center;
+  font-size: 30px;
+  color: #eee;
+}
+body > main > h1{
+ animation: rotate 2s infinite;
+}
+ body > main > h1::after{
+     content: "";
+     animation: change 10s 1 , boom 4s 10s 1;
+     background: linear-gradient(
+        110deg,
+        var(--light-blue) 5%,
+        var(--dark-blue) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+ }
+ @keyframes change{
+  10%{
+      content: "Checking....";
+      font-size: 50px;
+  }
+  25%{
+content: "Checking your browser...";
+font-size: 45px;
+  }
+  50%{
+      content: "fetching github...";
+      font-size: 45px;
+  }
+  75%{
+      content: "fetching repos...";
+      font-size: 50px;
+  }
+  80%{
+      content: "Checking once again.";
+      font-size: 45px;
+  }
+  100%{
+      content: "Your ready to go !";
+      font-size: 50px;
+  }
+}
+@keyframes rotate {
+    0% {
+      transform: rotateX(0deg);
+    }
+    100% {
+      transform: rotateX(360deg);
+    }
+}
+body > main > :nth-child(4)::after {
+  content: " Github Profile";
+  background: linear-gradient(
+    110deg,
+    var(--light-blue) 5%,
+    var(--dark-blue) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+@keyframes boom{
+    from{
+        content: "Boom !!!";
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 700;
+
+    }
+    to{
+        content: "Boom !!!";
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 700;
+    }
+
+}
+body > main > div.container{
+    width: 30vw;
+    height: 3vh;
+    background-color: var(--light-navy);
+    margin: auto auto;
+    border-radius: 30px;
+}
+body > main > div.container > div.load{
+    width: 30vw;
+    height: 3vh;
+    border-radius:30px;
+    animation: load 10s 1s 1;
+}
+@keyframes load {
+    0%{
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          width: 3vw;
+    }
+    25%{
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          width: 5vw;
+    }
+    50%{
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          width: 10vw;
+    }
+    60%{
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          width: 13vw;
+    }
+    75%{
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          width: 20vw;
+    }
+    80%{
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          width: 23vw;
+    }
+    100%{
+        background: linear-gradient(
+            110deg,
+            var(--light-blue) 5%,
+            var(--dark-blue) 100%
+          );
+          width: 30vw;
+    }
+    
+
+  }
+  @media only screen and (max-width:600px){
+    
+    body > main > p{
+      font-size: 20px;
+      font-weight: 400;
+    }
+    body > main > h1{
+      font-size: 20px;
+    }
+    body > main > h1::after{
+      animation: change 10s 1;
+
+    }
+    @keyframes change{
+      10%{
+          content: "Checking....";
+          font-size: 30px;
+      }
+      25%{
+  content: "Checking your browser...";
+  font-size: 25px;
+      }
+      50%{
+          content: "fetching github...";
+          font-size: 35px;
+      }
+      75%{
+          content: "fetching repos...";
+          font-size: 30px;
+      }
+      80%{
+          content: "Checking once again.";
+          font-size: 25px;
+      }
+      100%{
+          content: "Your ready to go !";
+          font-size: 30px;
+      }
+  }
+
+
+
+
+
+  }
