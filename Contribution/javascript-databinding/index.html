@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-binding</title>
+</head>
+<body>
+    <input type="number" id="inputEl" value=''>
+    <span id="value"></span>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+
+
+    <!-- path from javascript-databinding root directories -->
+    <script src="/state.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const valueEl = document.getElementById('value')
+            const inputEl = document.getElementById('inputEl')
+            const incrementEl = document.getElementById('increment')
+            const decrementEl = document.getElementById('decrement')
+
+            const updateElement = (value) => {
+                valueEl.innerText = value
+                inputEl.value = value
+            }
+
+            const state = new State(0, (initialState) => updateElement(initialState))
+            state.setHook = (state) => updateElement(state)
+
+            inputEl.addEventListener('change', e => {
+                state.setState = (prev) => {
+                    if(!e.target.value) return prev
+                    if(e.target.value < 0) return 0
+                    return Number(e.target.value)
+                }
+            })
+
+            inputEl.addEventListener('keyup', e => {
+                state.setState = (prev) => {
+                    if(!e.target.value) return prev
+                    if(e.target.value < 0) return 0
+                    return Number(e.target.value)
+                }
+            })
+
+            incrementEl.addEventListener('click', e => {
+                state.setState = (prev) => Number(prev) + 1
+            })
+
+            decrementEl.addEventListener('click', () => {
+                state.setState = (prev) => {
+                    if(prev > 0) return Number(prev) - 1
+                    return prev
+                }
+            })
+        })
+    </script>
+</body>
+</html>
